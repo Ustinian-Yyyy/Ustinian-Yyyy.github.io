@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TestOnLine</title>
+    <!--连接JS-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="TestOnLine.js" defer="defer"></script>
+    <script>
+      function answer(){
+        alert('对于你的答案，张邈老师给出了“初具人形，略通人性”的评价，并为你准备了一份参考答案，点击确定后即可查看。')
+        alert('一、'+'\n'+'1. B'+'\n'+'解析：盲人戴眼镜——假聪（充）明')
+        alert('二、'+'\n'+'1. 一清（青）二白'+'\n'+'2. 有言（盐）在先')
+        alert('四、'+'\n'+'1. 死心塌地'+'\n'+'2. 上气不接下气'+'\n'+'3. 全是熟人'+'\n'+'4. 赢定了'+'\n'+'5. 绝到家了')
+        }
+    </script>
+
+    <style>
+        body {
+            background：linear-gradient(to bottom, #B9D3EE,	#7EC0EE);
+            margin-left: 250px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+            color: #63B8FF;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 2px;
+            color: #63B8FF;
+        }
+
+        input {
+            margin-top: 10px;
+            background-color: white;
+            border: none;
+            border-bottom: black 1px solid;
+            outline: none;
+
+        }
+
+        textarea {
+            height: 100px;
+            width: 500px;
+        }
+
+        li {
+            color: black;
+            font-size: 13px;
+            list-style: none;
+        }
+
+        #btn {
+            background-color: #1E90FF;
+            color: white;
+            padding: 5px 10px;
+            margin-left: 380px;
+            margin-top: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .xin-xi {
+            text-align: center;
+        }
+
+        .ti-mu {
+            margin-left: 100px;
+        }
+
+        .all {
+            background-color: white;
+            width: 800px;
+            /*设置阴影*/
+            box-shadow: 10px 10px 15px black;
+        }
+
+        .line {
+            width: 750px;
+            border: #1E90FF 1.4px solid;
+        }
+    </style>
+
+</head>
+<body>
+<div class="all">
+    <h1>辟雍学宫入学考试</h1>
+    <h2>歇后语专场</h2>
+    <!--隔离线 hr-->
+    <hr class="line">
+
+    <!--信息填写部分-->
+    <div class="xin-xi">
+        <tr>
+            <td>姓名：</td>
+            <td><input type="text" name="ID" placeholder="请输入姓名"></td>
+            <td>所属地区：</td>
+            <td><input type="text" name="Nmae" id="aaa" placeholder="请输入所属地区"></td>
+            <td>您所在的阵营</td>
+            <td><select name="Class">
+                <option value="0">--请选择--</option>
+                <option value="1">广陵</option>
+                <option value="2">江东</option>
+                <option value="2">袁氏</option>
+                <option value="2">墨家</option>
+                <option value="2">里八华</option>
+                <option value="2">隐鸢阁</option>
+                <option value="3">五斗米</option>
+                <option value="4">西凉军</option>
+            </select></td>
+        </tr>
+    </div>
+    <!--题目部分-->
+    <div class="ti-mu">
+        <!--单选题部分-->
+        <h3>一、单选题</h3>
+        <ul>
+            <h4>1.下列歇后语对应错误的是(  )</h4>
+            <li><input type="radio" name="xz01" value="A">A.外甥打灯笼——照旧</li>
+            <li><input type="radio" name="xz01" value="B">B.盲人戴眼镜——撞名</li>
+            <li><input type="radio" name="xz01" value="C">C.一条腿的裤子——成了群</li>
+            <li><input type="radio" name="xz01" value="D">D.千年的石佛乡——老实人</li>
+        </ul>
+
+        <!--填空题部分-->
+        <h3>二、填空题</h3>
+        <ul>
+            <h4>1. 小葱拌豆腐——<input type="text" name="tk01"></h4>
+            <h4>2. 咸菜煎豆腐——<input type="text" name="tk01"></h4>
+        </ul>
+
+        <!--简答题部分-->
+        <h3>三、简答题</h3>
+        <ul>
+            <h4>1. 为什么想加入辟雍学宫？</h4>
+            <textarea name="jd01"></textarea>
+        </ul>
+        <ul>
+            <h4>2. 请对本次考试的监考兼评委的张邈老师做出评价。</h4>
+            <textarea name="jd02"></textarea>
+        </ul>
+
+        <!--附加题部分-->
+        <h3>四、鸢种附加题</h3>
+        <ul>
+            <h4>1. 陈登钓鱼——<input type="text" name="tk01"></h4>
+            <h4>2. 老头吹唢呐——<input type="text" name="tk01"></h4>
+            <h4>3. 程昱的开水锅——<input type="text" name="tk01"></h4>
+            <h4>4. 秦始皇晒屁股——<input type="text" name="tk01"></h4>
+            <h4>5. 铲子他妈给铲子开门——<input type="text" name="tk01"></h4>
+        </ul>
+    </div>
+    <!--划线-->
+    <hr class="line">
+    <!--提交按钮-->
+    <div class="ti-jiao">
+        <button type="button" id="btn" onclick="answer()">提交试卷</button>
+    </div>
+</div>
+</body>
+</html>

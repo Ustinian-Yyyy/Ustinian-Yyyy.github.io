@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body {
+          background: linear-gradient(to bottom, #B9D3EE,	#7EC0EE);
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-size: 16px;
+      }
+      .wrapper {
+        height: 6vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .typing-demo {
+        width: 28ch;
+        white-space: nowrap;overflow: hidden;
+        border-right: 3px solid;
+        font-family: monospace;
+        font-size: 2em;
+        animation: typing 2s steps(22);
+      }
+      @keyframes typing {
+        from {
+          width: 0
+        }
+      }
+      #myButton {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+           background-color: #63B8FF;
+           color: white;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+      }
+	</style>
+  </head>
+  <body>
+  <!--文字-->
+    <div class="wrapper">
+      <div class="typing-demo">
+      准备好后即可点击按钮开始作答
+      </div>
+    </div>
+    <a href="歇后语.html">
+      <button id="myButton" style="display: none;">开始作答</button>
+    </a>
+
+  <!--按钮出现-->
+
+  <script>
+        setTimeout(function() {
+            document.getElementById('myButton').style.display = 'block';
+        }, 2400);
+  </script>
+
+  </body>
+</html>
